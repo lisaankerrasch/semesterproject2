@@ -1,0 +1,13 @@
+div.footer.container {
+  margin: 30px auto !important;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-stripe {
+  height: 10px;
+  background-color: $accent;
+}

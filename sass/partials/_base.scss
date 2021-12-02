@@ -1,0 +1,80 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: $light;
+  font-family: "Playfair Display", serif;
+  color: $dark;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: 100px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+a.active {
+  color: $brown;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  @media screen and (min-width: $breakpoint-fullwidth) {
+    width: 100%;
+    margin: 100px auto;
+  }
+
+  &__new-arrivals {
+    background-color: $grey;
+  }
+}
+
+.section {
+  margin-bottom: 30px;
+
+  &__grey {
+    background-color: $grey;
+  }
+
+  &__brown {
+    background-color: $brown;
+  }
+  &__beige {
+    background-color: $beige;
+  }
+}
+
+.section-color__beige {
+  height: 200px;
+  background-color: $beige;
+}
+
+.hidden {
+  display: none;
+}

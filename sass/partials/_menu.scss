@@ -1,0 +1,55 @@
+.menu {
+  background-color: $light;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 0;
+    width: 90%;
+
+    @media screen and (min-width: $breakpoint-fullwidth) {
+      width: 100%;
+    }
+  }
+  &__logo {
+    font-size: 20px;
+    letter-spacing: 10px;
+    @media screen and (min-width: $breakpoint-tablet) {
+      font-size: 28px;
+    }
+  }
+  &__links {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    font-size: 16px;
+    @media screen and (min-width: $breakpoint-desktop) {
+      display: flex;
+      font-size: 18px;
+    }
+
+    :hover {
+      color: $brown;
+    }
+  }
+  &__cart {
+    width: 30px;
+  }
+  a {
+    text-transform: uppercase;
+    font-family: $font-primary;
+    text-decoration: none;
+    color: $dark;
+  }
+
+  &__icon {
+    width: 30px;
+    @media screen and (min-width: $breakpoint-desktop) {
+      display: none;
+    }
+  }
+}

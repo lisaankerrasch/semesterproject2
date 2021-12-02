@@ -1,0 +1,49 @@
+.null {
+  display: none;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+
+  &__red {
+    background-color: #ea1501;
+  }
+  &__blue {
+    background-color: #34369e;
+  }
+  &__purple {
+    background-color: #b87eff;
+  }
+  &__yellow {
+    background-color: yellow;
+  }
+  &__pink {
+    background-color: pink;
+  }
+  &__lightblue {
+    background-color: lightblue;
+  }
+  &__black {
+    background-color: black;
+  }
+  &__fuchsia {
+    background-color: #ff0f78;
+  }
+  &__white {
+    background-color: white;
+  }
+  &__gold {
+    background-color: #ad8131;
+  }
+  &__brown {
+    background-color: #463310;
+  }
+  &__silver {
+    background-color: silver;
+  }
+  &__beige {
+    background-color: #d2c6b3;
+  }
+}

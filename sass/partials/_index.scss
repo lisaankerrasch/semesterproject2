@@ -1,0 +1,27 @@
+.frontpage__news {
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+    }
+
+    &__image {
+      width: 100%;
+      object-fit: cover;
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        width: 465px;
+        height: 465px;
+      }
+    }
+
+    &__text p {
+      font-size: 22px;
+    }
+  }
+}
