@@ -6,6 +6,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     @media screen and (min-width: $breakpoint-desktop) {
+      gap: 30px;
+    }
+
+    @media screen and (min-width: $breakpoint-fullwidth) {
       gap: 112px;
     }
     a {
@@ -16,9 +20,13 @@
 
 .product {
   margin: 20px auto;
+  max-width: 280px;
+  @media screen and (min-width: $breakpoint-tablet) {
+    max-width: 290px;
+  }
 
   @media screen and (min-width: $breakpoint-desktop) {
-    margin: 0;
+    max-width: 325px;
   }
 
   &__text {
@@ -29,6 +37,7 @@
     width: 280px;
     height: 300px;
     object-fit: cover;
+    margin: 0 auto;
     @media screen and (min-width: $breakpoint-tablet) {
       width: 325px;
     }
@@ -90,4 +99,8 @@
     width: 500px;
     margin-bottom: 50px;
   }
+}
+
+.product__thumbnail img {
+  width: 100%;
 }

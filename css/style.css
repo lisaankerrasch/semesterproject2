@@ -313,6 +313,12 @@ a:hover {
 
 @media screen and (min-width: 768px) {
   .container__products, .container__might-like__content {
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .container__products, .container__might-like__content {
     gap: 112px;
   }
 }
@@ -323,11 +329,18 @@ a:hover {
 
 .product {
   margin: 20px auto;
+  max-width: 280px;
+}
+
+@media screen and (min-width: 480px) {
+  .product {
+    max-width: 290px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .product {
-    margin: 0;
+    max-width: 325px;
   }
 }
 
@@ -340,6 +353,7 @@ a:hover {
   width: 280px;
   height: 300px;
   object-fit: cover;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 480px) {
@@ -416,6 +430,10 @@ a:hover {
     width: 500px;
     margin-bottom: 50px;
   }
+}
+
+.product__thumbnail img {
+  width: 100%;
 }
 
 .button {
