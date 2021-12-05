@@ -13,7 +13,6 @@ async function getFeatured() {
     const products = await response.json();
 
     renderProducts(products);
-    // searchProducts(products);
 
     const cartButtons = document.querySelectorAll(".product__cart");
 

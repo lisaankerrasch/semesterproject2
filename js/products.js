@@ -1,4 +1,3 @@
-import createMenu from "./components/common/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { renderProducts } from "./ui/renderProducts.js";
 import {
@@ -6,6 +5,7 @@ import {
   filterProducts,
   seeAllproducts,
 } from "./ui/searchProducts.js";
+import createMenu from "./components/common/createMenu.js";
 
 createMenu();
 

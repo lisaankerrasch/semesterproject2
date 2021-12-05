@@ -31,6 +31,7 @@
     align-items: center;
   }
   &__links {
+    position: relative;
     font-size: 16px;
     @media screen and (min-width: $breakpoint-desktop) {
       display: flex;
@@ -67,4 +68,17 @@
       display: none;
     }
   }
+}
+
+.cart__counter {
+  display: none;
+  position: absolute;
+  right: -18px;
+  top: -20px;
+  font-family: "Playfair Display", serif;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: $accent;
+  text-align: center;
 }

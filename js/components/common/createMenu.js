@@ -1,4 +1,4 @@
-import { getUserName } from "../../utils/storage.js";
+import { getItemsInCart, getUserName } from "../../utils/storage.js";
 import logoutButton from "./logoutButton.js";
 
 export default function createMenu() {
@@ -46,10 +46,12 @@ export default function createMenu() {
                                 <div class="menu__links ">
                                   ${authLink} 
                                   <a href="cart.html"><img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart"></a>
+                                  <div class="cart__counter"></div>
                                 </div>
                             </div>`;
   logoutButton();
   showMenu();
+  countCart();
 }
 
 function showMenu() {
@@ -63,4 +65,16 @@ function showMenu() {
   menuIcon.onclick = function () {
     menuLinks.classList.toggle("hidden");
   };
+}
+
+export function countCart() {
+  const cartCounter = document.querySelector(".cart__counter");
+  const cartCount = getItemsInCart().length;
+
+  console.log(cartCount);
+  if (cartCount !== 0) {
+    cartCounter.style.display = "block";
+  }
+
+  cartCounter.innerHTML = cartCount;
 }

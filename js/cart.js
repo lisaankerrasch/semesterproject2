@@ -50,6 +50,7 @@ function clearCart() {
     clearButton.classList.add("hidden");
     window.localStorage.removeItem("inCart");
     sumContainer.innerHTML = "";
+    location.reload();
 
     renderProducts([]);
   }
@@ -59,8 +60,6 @@ let total = 0;
 
 inCart.forEach(function (cartElement) {
   total += parseFloat(cartElement.price);
-
-  console.log(typeof cartElement.price);
 });
 
 if (inCart.length !== 0) {

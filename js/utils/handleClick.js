@@ -28,6 +28,7 @@ export function handleClick() {
     };
     currentCart.push(product);
     saveCart(currentCart);
+    location.reload();
   } else {
     const newCart = currentCart.filter((cartItem) => cartItem.id !== id);
     saveCart(newCart);

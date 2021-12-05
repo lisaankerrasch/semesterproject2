@@ -23,6 +23,7 @@
   max-width: 280px;
   @media screen and (min-width: $breakpoint-tablet) {
     max-width: 290px;
+    margin: 20px 0;
   }
 
   @media screen and (min-width: $breakpoint-desktop) {
