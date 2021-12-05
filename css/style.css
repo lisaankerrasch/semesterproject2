@@ -803,3 +803,28 @@ div.footer.container {
     opacity: 0.2;
   }
 }
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1250px) {
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}
+
+.about__flex__image img {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 1250px) {
+  .about__flex__image img {
+    width: 600px;
+    margin: 0;
+  }
+}

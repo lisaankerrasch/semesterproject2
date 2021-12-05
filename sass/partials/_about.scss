@@ -1,0 +1,17 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $breakpoint-fullwidth) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  &__flex__image img {
+    width: 100%;
+    margin-top: 20px;
+    @media screen and (min-width: $breakpoint-fullwidth) {
+      width: 600px;
+      margin: 0;
+    }
+  }
+}
