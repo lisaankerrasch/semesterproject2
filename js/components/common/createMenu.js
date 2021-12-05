@@ -45,8 +45,10 @@ export default function createMenu() {
                                 </div>
                                 <div class="menu__links ">
                                   ${authLink} 
-                                  <a href="cart.html"><img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart"></a>
+                                  <div class="cart__icon__container"><a href="cart.html"><img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
+                                  </a>
                                   <div class="cart__counter"></div>
+                                  </div>
                                 </div>
                             </div>`;
   logoutButton();

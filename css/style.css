@@ -92,11 +92,22 @@
   }
 }
 
+.cart__icon__container {
+  position: relative;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .cart__icon__container {
+    margin-top: 0;
+  }
+}
+
 .cart__counter {
   display: none;
   position: absolute;
-  right: -18px;
-  top: -20px;
+  left: 20px;
+  bottom: 20px;
   font-family: "Playfair Display", serif;
   height: 30px;
   width: 30px;
