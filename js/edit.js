@@ -14,8 +14,6 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
-console.log(id);
-
 if (!id) {
   document.location.href = "/";
 }
@@ -53,8 +51,6 @@ const loading = document.querySelector(".loading");
     idInput.value = product[0].id;
 
     deleteButton(product[0].id);
-
-    console.log(product);
   } catch (error) {
     console.log(error);
   } finally {
@@ -80,8 +76,6 @@ function submitForm(submit) {
   const color3Value = color3.value.trim();
   const featuredValue = featured.value.trim();
   const idValue = idInput.value;
-
-  console.log("titleValue", titleValue);
 
   if (
     titleValue.length === 0 ||

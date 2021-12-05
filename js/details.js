@@ -11,7 +11,10 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const productUrl = baseUrl + "products?id=" + id;
+console.log(id);
+
+const detaillUrl = baseUrl + "products?id=" + id;
+const productsUrl = baseUrl + "products";
 
 if (!id) {
   document.location.href = "/";
@@ -19,10 +22,54 @@ if (!id) {
 
 async function getDetails() {
   try {
-    const response = await fetch(productUrl);
+    const response = await fetch(detaillUrl);
     const detail = await response.json();
+    const currentCategory = detail[0].category;
+    const currentId = detail[0].id;
 
-    renderProducts(detail);
+    renderDetails(detail);
+
+    async function mightLike() {
+      try {
+        const response = await fetch(productsUrl);
+        const detail = await response.json();
+
+        const mightlikeContainer = document.querySelector(
+          ".container__might-like__content"
+        );
+
+        for (let i = 1; i < detail.length; i++) {
+          if (
+            detail[i].category === currentCategory &&
+            detail[i].id !== currentId
+          ) {
+            mightlikeContainer.innerHTML += `
+                                              <div class="product">
+                                              <a href="details.html?id=${detail[i].id}">
+                                              <img class="product__thumbnail" src="${detail[i].image_url}" alt="${detail[i].title}">
+                                              <div class="product__title product__text">
+                                                  <h3>${detail[i].title}</h3>
+                                              </div>
+                                              </a>
+                                                    <div class="product__price product__text">
+                                                      <h4>$${detail[i].price}</h4>
+                                                    </div>
+                                                    <div class="product__info__flex">
+                                                      <div class="product__colors">
+                                                        <div class="${detail[i].color}"></div>
+                                                        <div class="${detail[i].color_secondary}"></div>
+                                                        <div class="${detail[i].color_tertiary}"></div>
+                                                      </div>
+                                                    </div>
+                                                </div>`;
+          }
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    mightLike();
 
     const cartButtons = document.querySelectorAll(".detail__cart");
     cartButtons.forEach((cart) => {
@@ -33,10 +80,10 @@ async function getDetails() {
   }
 }
 
-function renderProducts(productsToRender) {
+function renderDetails(detailsToRender) {
   const inCart = getItemsInCart();
 
-  productsToRender.forEach(function (detail) {
+  detailsToRender.forEach(function (detail) {
     let cssClass = "notInCart";
 
     const detailContainer = document.querySelector(".container__details");
@@ -50,8 +97,7 @@ function renderProducts(productsToRender) {
     if (isProductInCart) {
       cssClass = "inCart";
     }
-
-    // title.innerHTML = `${detail[0].title}`;
+    title.innerHTML = `${detail.title}`;
 
     detailContainer.innerHTML = `
 

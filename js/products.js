@@ -1,9 +1,11 @@
 import createMenu from "./components/common/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import { renderProducts } from "./ui/renderProducts.js";
-import { searchProducts } from "./ui/searchProducts.js";
-import { handleClick } from "./utils/handleClick.js";
-import { filterProducts } from "./ui/searchProducts.js";
+import {
+  searchProducts,
+  filterProducts,
+  seeAllproducts,
+} from "./ui/searchProducts.js";
 
 createMenu();
 
@@ -17,6 +19,7 @@ async function getProducts() {
     renderProducts(products);
     searchProducts(products);
     filterProducts(products);
+    seeAllproducts(products);
   } catch (error) {
     console.log(error);
   }

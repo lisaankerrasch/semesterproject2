@@ -6,6 +6,9 @@
   @media screen and (min-width: $breakpoint-desktop) {
     margin: 100px 0;
   }
+  &__total {
+    margin-bottom: 50px;
+  }
 
   p {
     font-size: 18px;

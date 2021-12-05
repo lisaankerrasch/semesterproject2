@@ -9,6 +9,11 @@
     flex-direction: row;
     margin: 0 auto;
   }
+  &__info {
+    @media screen and (min-width: $breakpoint-desktop) {
+      margin-bottom: 50px;
+    }
+  }
 
   &__form {
     margin: 50px 0;
@@ -34,9 +39,13 @@
     }
   }
   &__image {
-    margin: 50px 0;
-    max-width: 700px;
-    object-fit: cover;
+    display: none;
+    @media screen and (min-width: $breakpoint-desktop) {
+      display: block;
+      margin: 50px 0;
+      max-width: 700px;
+      object-fit: cover;
+    }
   }
   &__image img {
     width: 100%;

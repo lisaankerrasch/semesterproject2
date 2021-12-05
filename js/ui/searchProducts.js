@@ -1,12 +1,13 @@
 import { renderProducts } from "./renderProducts.js";
 import { handleClick } from "../utils/handleClick.js";
 
+const header = document.querySelector("h2");
+
 export function searchProducts(products) {
   const search = document.querySelector(".search");
+  const productContainer = document.querySelector(".container__products");
 
   search.onkeyup = function (search) {
-    console.log(search);
-
     const searchValue = search.target.value.trim().toLowerCase();
 
     const filteredProducts = products.filter(function (product) {
@@ -15,13 +16,10 @@ export function searchProducts(products) {
         product.description.toLowerCase().includes(searchValue) ||
         product.category.toLowerCase().includes(searchValue)
       ) {
-        header.innerHTML = `Search result for ${searchValue}:`;
-
         return true;
       }
     });
-
-    console.log(filteredProducts);
+    header.innerHTML = `Search result for ${searchValue}:`;
 
     renderProducts(filteredProducts);
     const cartButtons = document.querySelectorAll(".product__cart");
@@ -31,7 +29,6 @@ export function searchProducts(products) {
     });
   };
 }
-const header = document.querySelector("h2");
 
 export function filterProducts(products) {
   const categoryButtons = document.querySelectorAll(".category");
@@ -56,4 +53,26 @@ export function filterProducts(products) {
       });
     }
   });
+}
+
+export function seeAllproducts(products) {
+  const seeAllButton = document.querySelector(".see-all");
+
+  seeAllButton.addEventListener("click", seeAll);
+
+  function seeAll() {
+    const allProducts = products.filter(function (product) {
+      if (product.created_at.includes("2021")) {
+        header.innerHTML = "All products";
+
+        return true;
+      }
+    });
+    renderProducts(allProducts);
+    const cartButtons = document.querySelectorAll(".product__cart");
+
+    cartButtons.forEach((cart) => {
+      cart.addEventListener("click", handleClick);
+    });
+  }
 }

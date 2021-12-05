@@ -6,7 +6,9 @@ export default function logoutButton() {
       const doLogout = confirm("Are you sure you want to log out?");
 
       if (doLogout) {
-        localStorage.clear();
+        window.localStorage.removeItem("user");
+        window.localStorage.removeItem("token");
+
         location.href = "/";
       }
     };

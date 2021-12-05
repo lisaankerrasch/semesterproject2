@@ -11,7 +11,11 @@ export default function createMenu() {
     pathname === "/products.html" ? "active" : ""
   }>
     Shop
-  </a><a id="login" href="login.html" class=${
+  </a>
+  <a href="about.html" class=${pathname === "/about.html" ? "active" : ""}>
+    about
+  </a>
+  <a id="login" href="login.html" class=${
     pathname === "/login.html" ? "active" : ""
   }>Log in</a>`;
 
@@ -19,10 +23,10 @@ export default function createMenu() {
     authLink = `<a href="products.html" class=${
       pathname === "/products.html" ? "active" : ""
     }>
-      Edit
+      Edit Product
     </a><a href="add.html" class=${
       pathname === "/add.html" ? "active" : ""
-    }>Add</a>
+    }>Add product</a>
     <a href="#" id="logout">Log out</a>`;
 
     loggedinContainer.innerHTML = `<p>Logged in as ${username}.</p>`;
@@ -31,16 +35,32 @@ export default function createMenu() {
   const menuContainer = document.querySelector(".menu");
 
   menuContainer.innerHTML = `<div class="menu__content">
-                                <div class="menu__logo">
-                                  <a href="/">SASS BOUTIQUE </a>
+                                <div class="menu__mobile">
+                                  <div class="menu__logo">
+                                    <a href="/">éphémère</a>
+                                  </div>
+                                  <div class="menu__icon">
+                                  <img src="images/icons/menu.svg" alt="menu-icon">
+                                  </div>
                                 </div>
-                                <div class="menu__links">
+                                <div class="menu__links ">
                                   ${authLink} 
                                   <a href="cart.html"><img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart"></a>
                                 </div>
-                                <div class="menu__icon">
-                                <img src="images/icons/menu.svg" alt="menu-icon">
-                                </div>
                             </div>`;
   logoutButton();
+  showMenu();
+}
+
+function showMenu() {
+  const menuIcon = document.querySelector(".menu__icon");
+  const menuLinks = document.querySelector(".menu__links");
+
+  if (window.innerWidth < 768) {
+    menuLinks.classList.add("hidden");
+  }
+
+  menuIcon.onclick = function () {
+    menuLinks.classList.toggle("hidden");
+  };
 }

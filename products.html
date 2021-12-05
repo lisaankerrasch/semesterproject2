@@ -7,7 +7,7 @@
       name="description"
       content="The most beautiful accessories right now"
     />
-    <title>B O U T I Q U E | SHOP</title>
+    <title>Éphémère | Shop</title>
     <link href="css/style.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,28 +33,52 @@
         placeholder="Search product or category here..."
       />
       <div class="categories">
-        <button class="category button button__accent">Shoes</button>
-        <button class="category button button__accent">Sunglasses</button>
-        <button class="category button button__accent">Jewellery</button>
-        <button class="category button button__accent">Bags</button>
-        <button class="category button button__accent">Hair Accessories</button>
+        <button class="category button button__accent button__small">
+          Shoes
+        </button>
+        <button class="category button button__accent button__small">
+          Sunglasses
+        </button>
+        <button class="category button button__accent button__small">
+          Jewellery
+        </button>
+        <button class="category button button__accent button__small">
+          Bags
+        </button>
+        <button class="category button button__accent button__small">
+          Hair Accessories
+        </button>
+        <button class="button button__accent button__small see-all">
+          See all
+        </button>
       </div>
 
       <h2>All products</h2>
 
-      <div class="container__products"></div>
+      <div class="container__products">
+        <div class="loader">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
     <footer>
-      <div class="color-stripe"></div>
       <div class="footer container">
         <div class="footer-column-1">
-          <div class="loggedin-container"><p>You are not logged in.</p></div>
+          <div class="loggedin-container">
+            <p>You are not logged in.</p>
+            <a href="login.html">Log in</a>
+          </div>
         </div>
         <div class="footer-column-2">
-          <div><p>Copyright 2021</p></div>
+          <div><p>© 2021 Éphémère</p></div>
+          <div class="some">
+            <img class="some-img" src="images/icons/facebook.svg" />
+            <img class="some-img" src="images/icons/instagram.svg" />
+          </div>
         </div>
         <div class="footer-column-3">
-          <div><p>hi@boutique.com</p></div>
+          <div><p>hi@ephemere.com</p></div>
         </div>
       </div>
     </footer>

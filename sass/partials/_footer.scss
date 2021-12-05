@@ -1,13 +1,28 @@
+footer {
+  background-color: $grey;
+  flex-shrink: 0;
+}
+
 div.footer.container {
   margin: 30px auto !important;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
-.color-stripe {
-  height: 10px;
-  background-color: $accent;
+.some {
+  margin: 0 auto;
+  @media screen and (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    width: 50px;
+  }
 }

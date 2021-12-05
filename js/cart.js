@@ -7,18 +7,17 @@ createMenu();
 const inCart = getItemsInCart();
 
 const cartContainer = document.querySelector(".container__cart");
-const sumContainer = document.querySelector(".cart__total");
+const sumContainer = document.querySelector(".container__cart__total");
 
 const clearButton = document.querySelector(".clear-button");
 
 if (inCart.length === 0) {
   cartContainer.innerHTML = `<div><p>No items in cart. Go to the <a href="products.html">products page</a> to do something about it!</p></div>`;
+  sumContainer.innerHTML = "";
 }
 
 inCart.forEach(function (product) {
   clearButton.classList.remove("hidden");
-
-  console.log(product.title);
 
   cartContainer.innerHTML += `<div class="product">
                                 <a href="details.html?id=${product.id}">
@@ -50,7 +49,20 @@ function clearCart() {
 
     clearButton.classList.add("hidden");
     window.localStorage.removeItem("inCart");
+    sumContainer.innerHTML = "";
 
     renderProducts([]);
   }
+}
+
+let total = 0;
+
+inCart.forEach(function (cartElement) {
+  total += parseFloat(cartElement.price);
+
+  console.log(typeof cartElement.price);
+});
+
+if (inCart.length !== 0) {
+  sumContainer.innerHTML = `<h3>Cart total: $${total}</h3>`;
 }
