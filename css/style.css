@@ -43,6 +43,14 @@
   align-items: center;
 }
 
+.menu__mobile__2 {
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 40px;
+}
+
 .menu__links {
   position: relative;
   font-size: 16px;
@@ -94,7 +102,6 @@
 
 .cart__icon__container {
   position: relative;
-  margin-top: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -334,12 +341,7 @@ a:hover {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-@media screen and (min-width: 768px) {
-  .container__products, .container__might-like__content {
-    gap: 30px;
-  }
+  gap: 30px;
 }
 
 @media screen and (min-width: 1250px) {
@@ -360,13 +362,13 @@ a:hover {
 @media screen and (min-width: 480px) {
   .product {
     max-width: 290px;
-    margin: 20px 0;
   }
 }
 
 @media screen and (min-width: 768px) {
   .product {
     max-width: 325px;
+    margin: 20px 0;
   }
 }
 

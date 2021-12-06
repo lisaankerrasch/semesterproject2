@@ -34,23 +34,49 @@ export default function createMenu() {
 
   const menuContainer = document.querySelector(".menu");
 
-  menuContainer.innerHTML = `<div class="menu__content">
+  if (window.innerWidth < 768) {
+    menuContainer.innerHTML = `<div class="menu__content">
                                 <div class="menu__mobile">
                                   <div class="menu__logo">
                                     <a href="/">éphémère</a>
                                   </div>
-                                  <div class="menu__icon">
-                                  <img src="images/icons/menu.svg" alt="menu-icon">
+                                  <div class="menu__mobile__2">
+                                    <div class="cart__icon__container">
+                                      <a href="cart.html">
+                                      <img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
+                                      </a>
+                                      <div class="cart__counter"></div>
+                                    </div>
+                                    <div class="menu__icon">
+                                      <img src="images/icons/menu.svg" alt="menu-icon">
+                                    </div>
                                   </div>
                                 </div>
                                 <div class="menu__links ">
                                   ${authLink} 
-                                  <div class="cart__icon__container"><a href="cart.html"><img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
-                                  </a>
-                                  <div class="cart__counter"></div>
-                                  </div>
                                 </div>
-                            </div>`;
+                              </div>`;
+  } else {
+    menuContainer.innerHTML = `<div class="menu__content">
+                                      <div class="menu__mobile">
+                                          <div class="menu__logo">
+                                              <a href="/">éphémère</a>
+                                          </div>
+                                          <div class="menu__icon">
+                                              <img src="images/icons/menu.svg" alt="menu-icon">
+                                           </div>
+                                      </div>
+                                      <div class="menu__links ">
+                                          ${authLink} 
+                                          <div class="cart__icon__container">
+                                            <a href="cart.html">
+                                              <img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
+                                            </a>
+                                            <div class="cart__counter"></div>
+                                          </div>
+                                        </div>
+                                  </div>`;
+  }
   logoutButton();
   showMenu();
   countCart();
@@ -73,7 +99,6 @@ export function countCart() {
   const cartCounter = document.querySelector(".cart__counter");
   const cartCount = getItemsInCart().length;
 
-  console.log(cartCount);
   if (cartCount !== 0) {
     cartCounter.style.display = "block";
   }

@@ -29,6 +29,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &__2 {
+      width: 200px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 40px;
+    }
   }
   &__links {
     position: relative;
@@ -72,7 +80,6 @@
 
 .cart__icon__container {
   position: relative;
-  margin-top: 40px;
   @media screen and (min-width: $breakpoint-desktop) {
     margin-top: 0;
   }
