@@ -48,7 +48,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
 .menu__links {
@@ -634,6 +634,27 @@ div.footer.container {
 
 .frontpage__news__flex__text p {
   font-size: 22px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section__grey {
+  background-color: #e6e5e3;
+}
+
+.section__brown {
+  background-color: #b7856e;
+}
+
+.section__beige {
+  background-color: #eadcce;
+}
+
+.section-color__beige {
+  height: 200px;
+  background-color: #eadcce;
 }
 
 .container__cart {

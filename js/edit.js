@@ -50,6 +50,9 @@ const loading = document.querySelector(".loading");
     featured.value = product[0].featured;
     idInput.value = product[0].id;
 
+    const editImage = document.querySelector(".edit__flex__image");
+    editImage.innerHTML = `<img src="${imageUrl.value}" alt ="${title.value}">`;
+
     deleteButton(product[0].id);
   } catch (error) {
     console.log(error);

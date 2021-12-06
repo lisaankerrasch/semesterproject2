@@ -25,3 +25,23 @@
     }
   }
 }
+
+.section {
+  margin-bottom: 30px;
+
+  &__grey {
+    background-color: $grey;
+  }
+
+  &__brown {
+    background-color: $brown;
+  }
+  &__beige {
+    background-color: $beige;
+  }
+}
+
+.section-color__beige {
+  height: 200px;
+  background-color: $beige;
+}
