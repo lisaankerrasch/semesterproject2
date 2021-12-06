@@ -37,6 +37,10 @@
   }
 }
 
+.menu__logo :hover {
+  color: #1f1a10;
+}
+
 .menu__mobile {
   display: flex;
   justify-content: space-between;
@@ -206,32 +210,7 @@ a:hover {
   background-color: #e6e5e3;
 }
 
-.section {
-  margin-bottom: 30px;
-}
-
-.section__grey {
-  background-color: #e6e5e3;
-}
-
-.section__brown {
-  background-color: #b7856e;
-}
-
-.section__beige {
-  background-color: #eadcce;
-}
-
-.section-color__beige {
-  height: 200px;
-  background-color: #eadcce;
-}
-
 .hidden {
-  display: none;
-}
-
-.null {
   display: none;
 }
 
@@ -291,6 +270,10 @@ a:hover {
 
 .circle__beige {
   background-color: #d2c6b3;
+}
+
+.circle__null {
+  display: none;
 }
 
 .hero__image {

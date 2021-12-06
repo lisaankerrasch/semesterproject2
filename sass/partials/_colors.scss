@@ -1,7 +1,3 @@
-.null {
-  display: none;
-}
-
 .circle {
   width: 20px;
   height: 20px;
@@ -45,5 +41,8 @@
   }
   &__beige {
     background-color: #d2c6b3;
+  }
+  &__null {
+    display: none;
   }
 }

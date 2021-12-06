@@ -18,13 +18,18 @@
       width: 100%;
     }
   }
+
   &__logo {
     font-size: 20px;
     letter-spacing: 10px;
     @media screen and (min-width: $breakpoint-tablet) {
       font-size: 28px;
     }
+    :hover {
+      color: $dark;
+    }
   }
+
   &__mobile {
     display: flex;
     justify-content: space-between;
@@ -38,6 +43,7 @@
       gap: 25px;
     }
   }
+
   &__links {
     position: relative;
     font-size: 16px;
@@ -46,7 +52,6 @@
       justify-content: space-between;
       align-items: center;
       gap: 50px;
-
       font-size: 18px;
     }
 
@@ -54,9 +59,11 @@
       color: $brown;
     }
   }
+
   &__cart {
     width: 30px;
   }
+
   a {
     display: block;
     text-transform: uppercase;

@@ -31,7 +31,7 @@ export default function deleteButton(id) {
         location.href = "/products.html";
       } catch (error) {
         console.log(error);
-        displayMessage("warning", "Could not delete", ".message-container");
+        displayMessage("error", "Could not delete", ".message-container");
       }
     }
   };

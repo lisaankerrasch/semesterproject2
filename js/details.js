@@ -11,8 +11,6 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-console.log(id);
-
 const detaillUrl = baseUrl + "products?id=" + id;
 const productsUrl = baseUrl + "products";
 
@@ -56,9 +54,9 @@ async function getDetails() {
                                                     </div>
                                                     <div class="product__info__flex">
                                                       <div class="product__colors">
-                                                        <div class="${detail[i].color}"></div>
-                                                        <div class="${detail[i].color_secondary}"></div>
-                                                        <div class="${detail[i].color_tertiary}"></div>
+                                                        <div class="circle circle__${detail[i].color}"></div>
+                                                        <div class="circle circle__${detail[i].color_secondary}"></div>
+                                                        <div class="circle circle__${detail[i].color_tertiary}"></div>
                                                       </div>
                                                     </div>
                                                 </div>`;
@@ -117,9 +115,9 @@ function renderDetails(detailsToRender) {
                                                      <h4>$${detail.price}</h4>
                                                  </div>
                                                  <div class="detail__colors">
-                                                     <div class="${detail.color}"></div>
-                                                     <div class="${detail.color_secondary}"></div>
-                                                     <div class="${detail.color_tertiary}"></div>
+                                                     <div class="circle circle__${detail.color}"></div>
+                                                     <div class="circle circle__${detail.color_secondary}"></div>
+                                                     <div class="circle circle__${detail.color_tertiary}"></div>
                                                  </div>
                                               </div>
                                               <div>

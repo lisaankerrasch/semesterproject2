@@ -79,7 +79,7 @@ async function addProduct(
     price: price,
     category: category,
     image_url: imageUrl,
-    color: `circle circle__` + color,
+    color: color,
     featured: featured,
   });
 

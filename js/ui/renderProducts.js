@@ -47,9 +47,9 @@ export function renderProducts(productsToRender) {
                                           </div>
                                           <div class="product__info__flex">
                                             <div class="product__colors">
-                                              <div class="${product.color}"></div>
-                                              <div class="${product.color_secondary}"></div>
-                                              <div class="${product.color_tertiary}"></div>
+                                              <div class="circle circle__${product.color}"></div>
+                                              <div class="circle circle__${product.color_secondary}"></div>
+                                              <div class="circle circle__${product.color_tertiary}"></div>
                                             </div>
                                             <div>
                                               <img class="product__cart ${cssClass}" src="images/icons/cart-stroke.svg" alt="Add to cart" data-id="${product.id}" data-name="${product.title}" data-description="${product.description}" data-price="${product.price}" data-image="${product.image_url}"data-category="${product.category}">
