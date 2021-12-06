@@ -111,16 +111,22 @@
 }
 
 .cart__counter {
-  display: none;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
   font-family: "Playfair Display", serif;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background-color: #efc3b4;
   text-align: center;
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+}
+
+@media screen and (min-width: 768px) {
+  .cart__counter {
+    bottom: 20px;
+  }
 }
 
 html,
@@ -139,7 +145,8 @@ body {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 30px;
+  font-size: 28px;
+  font-weight: lighter;
   text-transform: uppercase;
 }
 

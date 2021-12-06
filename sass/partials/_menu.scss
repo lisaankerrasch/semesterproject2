@@ -86,14 +86,17 @@
 }
 
 .cart__counter {
-  display: none;
-  position: absolute;
-  left: 20px;
-  bottom: 20px;
   font-family: "Playfair Display", serif;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   background-color: $accent;
   text-align: center;
+  display: none;
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+  @media screen and (min-width: $breakpoint-desktop) {
+    bottom: 20px;
+  }
 }
