@@ -76,7 +76,6 @@ async function getDetails() {
     });
   } catch (error) {
     console.log(error);
-    displayMessage();
   }
 }
 
