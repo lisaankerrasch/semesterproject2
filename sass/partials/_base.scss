@@ -13,14 +13,14 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-primary;
   font-size: 28px;
   font-weight: lighter;
   text-transform: uppercase;
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-primary;
   font-size: 28px;
   text-transform: uppercase;
   margin: 50px 0;

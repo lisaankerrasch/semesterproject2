@@ -2,6 +2,7 @@ import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/common/createMenu.js";
 import { getItemsInCart } from "./utils/storage.js";
 import { handleClick } from "./utils/handleClick.js";
+import { displayMessage } from "./components/common/displayMessage.js";
 
 createMenu();
 
@@ -75,6 +76,7 @@ async function getDetails() {
     });
   } catch (error) {
     console.log(error);
+    displayMessage();
   }
 }
 
@@ -121,7 +123,7 @@ function renderDetails(detailsToRender) {
                                                  </div>
                                               </div>
                                               <div>
-                                              <img class="detail__cart ${cssClass}" src="images/icons/cart-stroke.svg" alt="Add to cart" data-id="${detail.id}" data-name="${detail.title}" data-description="${detail.description}" data-price="${detail.price}" data-image="${detail.image_url}"data-category="${detail.category}">
+                                              <img class="detail__cart ${cssClass}" src="images/icons/cart-stroke-2.svg" alt="Add to cart" data-id="${detail.id}" data-name="${detail.title}" data-description="${detail.description}" data-price="${detail.price}" data-image="${detail.image_url}"data-category="${detail.category}">
                                               </div>
                                           </div>
                                      `;

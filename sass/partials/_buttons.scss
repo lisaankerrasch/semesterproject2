@@ -12,6 +12,10 @@
   &__light {
     background-color: $light;
     color: $dark;
+    &__noshadow {
+      margin-top: 30px;
+      box-shadow: none;
+    }
   }
   &__accent {
     background-color: $accent;

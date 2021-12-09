@@ -32,16 +32,28 @@
   &__grey {
     background-color: $grey;
   }
-
-  &__brown {
-    background-color: $brown;
-  }
   &__beige {
     background-color: $beige;
   }
-}
+  &__photo {
+    background-image: url("../images/index-photo-2.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
 
-.section-color__beige {
-  height: 200px;
-  background-color: $beige;
+    &__text {
+      padding: 20px;
+      width: 200px;
+      @media screen and (min-width: $breakpoint-desktop) {
+        position: relative;
+        left: 300px;
+        width: 520px;
+        height: 320px;
+        padding: 50px;
+        margin: 200px auto;
+      }
+      background-color: rgba(183, 133, 110, 0.73);
+    }
+  }
 }

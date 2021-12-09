@@ -43,7 +43,7 @@ export default function createMenu() {
                                   <div class="menu__mobile__2">
                                     <div class="cart__icon__container">
                                       <a href="cart.html">
-                                      <img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
+                                      <img class="menu__cart" src="images/icons/cart-filled-2.svg" alt="See cart">
                                       </a>
                                       <div class="cart__counter"></div>
                                     </div>
@@ -70,7 +70,7 @@ export default function createMenu() {
                                           ${authLink} 
                                           <div class="cart__icon__container">
                                             <a href="cart.html">
-                                              <img class="menu__cart" src="images/icons/cart-filled.svg" alt="See cart">
+                                              <img class="menu__cart" src="images/icons/cart-filled-2.svg" alt="See cart">
                                             </a>
                                             <div class="cart__counter"></div>
                                           </div>
