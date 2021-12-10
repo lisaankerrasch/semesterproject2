@@ -1,3 +1,9 @@
+.container {
+  &__new-arrivals {
+    background-color: $grey;
+  }
+}
+
 .frontpage__news {
   &__flex {
     display: flex;
@@ -44,8 +50,8 @@
 
     &__text {
       padding: 20px;
-      width: 200px;
-      @media screen and (min-width: $breakpoint-desktop) {
+      width: 90%;
+      @media screen and (min-width: $breakpoint-fullwidth) {
         position: relative;
         left: 300px;
         width: 520px;

@@ -56,6 +56,7 @@ const loading = document.querySelector(".loading");
     deleteButton(product[0].id);
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   } finally {
     loading.style.display = "none";
     form.style.display = "block";
@@ -154,5 +155,6 @@ async function updateProduct(
     }
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }

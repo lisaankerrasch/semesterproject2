@@ -206,10 +206,6 @@ a:hover {
   }
 }
 
-.container__new-arrivals {
-  background-color: #e6e5e3;
-}
-
 .hidden {
   display: none;
 }
@@ -322,10 +318,7 @@ a:hover {
   }
 }
 
-.login-banner {
-  object-position: center;
-}
-
+.login-banner,
 .cart-banner {
   object-position: center;
 }
@@ -598,6 +591,10 @@ div.footer.container {
   width: 50px;
 }
 
+.container__new-arrivals {
+  background-color: #e6e5e3;
+}
+
 .frontpage__news__flex {
   display: flex;
   flex-direction: column;
@@ -650,11 +647,11 @@ div.footer.container {
 
 .section__photo__text {
   padding: 20px;
-  width: 200px;
+  width: 90%;
   background-color: rgba(183, 133, 110, 0.73);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1250px) {
   .section__photo__text {
     position: relative;
     left: 300px;

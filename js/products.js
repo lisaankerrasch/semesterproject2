@@ -22,6 +22,7 @@ async function getProducts() {
     seeAllproducts(products);
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }
 

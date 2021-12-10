@@ -21,6 +21,7 @@ async function getFeatured() {
     });
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }
 
@@ -38,6 +39,7 @@ async function getHeroImage() {
     `;
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }
 

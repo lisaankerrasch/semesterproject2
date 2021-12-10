@@ -2,7 +2,6 @@ import { baseUrl } from "./settings/api.js";
 import createMenu from "./components/common/createMenu.js";
 import { getItemsInCart } from "./utils/storage.js";
 import { handleClick } from "./utils/handleClick.js";
-import { displayMessage } from "./components/common/displayMessage.js";
 
 createMenu();
 
@@ -65,6 +64,11 @@ async function getDetails() {
         }
       } catch (error) {
         console.log(error);
+        displayMessage(
+          "error",
+          "Something went wrong :(",
+          ".message-container"
+        );
       }
     }
 
@@ -76,6 +80,7 @@ async function getDetails() {
     });
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }
 

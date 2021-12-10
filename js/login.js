@@ -62,5 +62,6 @@ async function doLogin(username, password) {
     }
   } catch (error) {
     console.log(error);
+    displayMessage("error", "Something went wrong :(", ".message-container");
   }
 }
