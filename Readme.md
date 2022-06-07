@@ -4,9 +4,9 @@
 
 An accessory webshop with hats, sunglasses, shoes and jewellery. 
 
-## Description
+## Brief
 
-Brief: You are to build an e-commerce website. You can choose the theme of your website. It should follow the site architecture described below.
+You are to build an e-commerce website. You can choose the theme of your website. It should follow the site architecture described below.
 
 Design your website using your favourite tool. You will need to find a suitable logo. If you decide to create a logo yourself, do not spend too much time on it.
 
@@ -18,6 +18,7 @@ Build admin pages to create, update and delete products.
 
 The website must be responsive on all devices.
 
+## Functionalities
 
 Functionalities include: 
 
