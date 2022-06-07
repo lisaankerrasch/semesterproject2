@@ -60,6 +60,6 @@ npm run start
 
 ## Contact
 
-[My LinkedIn page](www.linkedin.com)
+[My LinkedIn page](https://www.linkedin.com/in/lisa-anker-rasch-strom/)
 
 
