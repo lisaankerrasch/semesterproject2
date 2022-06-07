@@ -2,21 +2,21 @@
 
 ![Ephemere](images/ephemere-details.jpg)
 
-A simple overview of the use/purpose of the project.
+An accessory webshop with hats, sunglasses, shoes and jewellery. 
 
 ## Description
 
 Add a more detailed description of what your project entails and set out to do.
 
-You can add some bullet points if you'd like to:
 
-- List item 1
-- List item 2
-- List item 3
+Functionalities include: 
+
+- Login function
+- Add to cart
+- Search and filter
 
 ## Built With
 
-You can list a the tech stack that you've used over here
 
 - [React.js](https://reactjs.org/)
 - [Sass](https://sass-lang.com/)
@@ -39,8 +39,6 @@ npm install
 ```
 
 ### Running
-
-Here is where you detail how to run the app. It typically involves the commands you'd need to run to start the project e.g.
 
 To run the app, run the following commands:
 
