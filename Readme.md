@@ -19,7 +19,7 @@ You can add some bullet points if you'd like to:
 You can list a the tech stack that you've used over here
 
 - [React.js](https://reactjs.org/)
-- [Sass] (https://sass-lang.com/))
+- [Sass] (https://sass-lang.com/)
 
 ## Getting Started
 
