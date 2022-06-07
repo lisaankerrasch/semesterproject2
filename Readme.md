@@ -23,6 +23,7 @@ The website must be responsive on all devices.
 Functionalities include: 
 
 - Login function
+- Create, update and delete products
 - Add to cart
 - Search and filter
 
