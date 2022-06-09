@@ -29,8 +29,7 @@ Functionalities include:
 
 ## Built With
 
-
-- [React.js](https://reactjs.org/)
+- [Strapi](https://strapi.io/)
 - [Sass](https://sass-lang.com/)
 
 
@@ -44,22 +43,14 @@ Functionalities include:
 git clone git@github.com:/lisaankerrasch/semesterproject2.git
 ```
 
-2. Install the dependencies:
-
-```
-npm install 
-```
-
 ### Running
 
-To run the app, run the following commands:
+Run via [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 
-```bash
-npm run start
-```
 
 ## Contact
 
-[My LinkedIn page](https://www.linkedin.com/in/lisa-anker-rasch-strom/)
+[My LinkedIn page](https://www.linkedin.com/in/lisa-anker-rasch-strom/)  
+[Instagram](https://www.instagram.com/x.itoh)  
 
 
